@@ -18,6 +18,9 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ApiModelProperty("学号")
+    private String number;
+
     @ApiModelProperty("姓名")
     private String name;
 
@@ -48,7 +51,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, String phone, String email, String sex, String grade, String major, boolean doubleDegree, boolean classCadre, boolean communityCadre) {
+    public Student(String number, String name, String phone, String email, String sex, String grade, String major, boolean doubleDegree, boolean classCadre, boolean communityCadre) {
+        this.number = number;
         this.name = name;
         this.phone = phone;
         this.email = email;
@@ -64,6 +68,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
+                ", number='" + number + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
@@ -74,6 +79,14 @@ public class Student {
                 ", classCadre=" + classCadre +
                 ", communityCadre=" + communityCadre +
                 '}';
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public Long getId() {

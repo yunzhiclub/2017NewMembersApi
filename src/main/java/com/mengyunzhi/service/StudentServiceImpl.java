@@ -15,7 +15,14 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student save(Student student) {
+        // 有则更新，无则添加
         studentRepository.save(student);
+        return student;
+    }
+
+    @Override
+    public Student getByNumber(String number) {
+        Student student = studentRepository.getByNumber(number);
         return student;
     }
 }

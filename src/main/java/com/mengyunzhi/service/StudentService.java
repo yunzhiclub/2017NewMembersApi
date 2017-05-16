@@ -7,4 +7,5 @@ import com.mengyunzhi.repository.Student;
  */
 public interface StudentService {
     Student save(Student student);
+    Student getByNumber(String number);
 }
