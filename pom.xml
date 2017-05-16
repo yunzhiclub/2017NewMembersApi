@@ -235,7 +235,7 @@
 				</configuration>
 				<executions>
 					<execution>
-						<phase>prepare-package</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>convertSwagger2markup</goal>
 						</goals>
