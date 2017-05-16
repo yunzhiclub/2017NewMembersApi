@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.*;
  * Created by panjie on 17/5/15.
  */
 @RestController
-@Api(tags = "学生", value = "Student")
+@Api(tags = "Student 学生", value = "学生")
 @RequestMapping("/Student")
 public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @ApiOperation(value = "保存学生信息", nickname = "Student_save")
+    @ApiOperation(value = "save 保存学生信息", nickname = "Student_save")
     @PostMapping("/")
     public Student save(@RequestBody Student student) {
         studentService.save(student);

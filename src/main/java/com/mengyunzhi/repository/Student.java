@@ -12,7 +12,7 @@ import javax.persistence.Id;
  * Created by panjie on 17/5/15.
  */
 @Entity
-@ApiModel("学生实体")
+@ApiModel("Student 学生实体")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
