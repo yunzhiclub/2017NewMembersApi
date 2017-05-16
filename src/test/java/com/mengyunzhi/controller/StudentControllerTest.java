@@ -40,9 +40,9 @@ public class StudentControllerTest {
         jsonObject.put("phone", "1399999999");
         jsonObject.put("grade", "大一");
         jsonObject.put("major", "计算机科学与技术");
-        jsonObject.put("isDoubleDegree", false);
-        jsonObject.put("isClassCadre", true);
-        jsonObject.put("isCommunityCadre", true);
+        jsonObject.put("doubleDegree", false);
+        jsonObject.put("classCadre", true);
+        jsonObject.put("communityCadre", true);
 
         this.mockMvc.perform(post("/Student/")
                 .contentType(MediaType.APPLICATION_JSON)
