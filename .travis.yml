@@ -26,10 +26,12 @@ notifications:
 # 执行脚本前创建数据库
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS newMembers2017 default charset utf8 COLLATE utf8_general_ci;' -uroot
+  - cd src
 # 脚本
 script:
   # 强制清除maven的所有缓存
 #  - mvn clean install -U
+  - cd ..
   - mvn test
 
 # 声明缓存
