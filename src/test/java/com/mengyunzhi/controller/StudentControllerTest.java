@@ -36,6 +36,7 @@ public class StudentControllerTest {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", "张三");
         jsonObject.put("sex", "男");
+        jsonObject.put("email", "hello@yunzhiclub.com");
         jsonObject.put("phone", "1399999999");
         jsonObject.put("grade", "大一");
         jsonObject.put("major", "计算机科学与技术");
