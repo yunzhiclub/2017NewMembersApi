@@ -26,6 +26,7 @@ notifications:
 # 执行脚本前创建数据库
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS newMembers2017 default charset utf8 COLLATE utf8_general_ci;' -uroot
+#  与脚本中的cd .. 相配合，规避travis自动执行 ./mvn install -DskipTests=true ...导致执行插件时依赖于mvn test生成文件而发生的error.
   - cd src
 # 脚本
 script:

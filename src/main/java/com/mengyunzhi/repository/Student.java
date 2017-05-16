@@ -37,27 +37,27 @@ public class Student {
     private String major;
 
     @ApiModelProperty("是否又学位")
-    private boolean isDoubleDegree = false;
+    private boolean doubleDegree = false;
 
     @ApiModelProperty("是否班干部")
-    private boolean isClassCadre = false;
+    private boolean classCadre = false;
 
     @ApiModelProperty("是否社团干部")
-    private boolean isCommunityCadre = false;
+    private boolean communityCadre = false;
 
     public Student() {
     }
 
-    public Student(String name, String phone, String email, String sex, String grade, String major, boolean isDoubleDegree, boolean isClassCadre, boolean isCommunityCadre) {
+    public Student(String name, String phone, String email, String sex, String grade, String major, boolean doubleDegree, boolean classCadre, boolean communityCadre) {
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.sex = sex;
         this.grade = grade;
         this.major = major;
-        this.isDoubleDegree = isDoubleDegree;
-        this.isClassCadre = isClassCadre;
-        this.isCommunityCadre = isCommunityCadre;
+        this.doubleDegree = doubleDegree;
+        this.classCadre = classCadre;
+        this.communityCadre = communityCadre;
     }
 
     @Override
@@ -70,9 +70,9 @@ public class Student {
                 ", sex='" + sex + '\'' +
                 ", grade='" + grade + '\'' +
                 ", major='" + major + '\'' +
-                ", isDoubleDegree=" + isDoubleDegree +
-                ", isClassCadre=" + isClassCadre +
-                ", isCommunityCadre=" + isCommunityCadre +
+                ", doubleDegree=" + doubleDegree +
+                ", classCadre=" + classCadre +
+                ", communityCadre=" + communityCadre +
                 '}';
     }
 
@@ -90,6 +90,22 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSex() {
@@ -117,26 +133,26 @@ public class Student {
     }
 
     public boolean isDoubleDegree() {
-        return isDoubleDegree;
+        return doubleDegree;
     }
 
     public void setDoubleDegree(boolean doubleDegree) {
-        isDoubleDegree = doubleDegree;
+        this.doubleDegree = doubleDegree;
     }
 
     public boolean isClassCadre() {
-        return isClassCadre;
+        return classCadre;
     }
 
     public void setClassCadre(boolean classCadre) {
-        isClassCadre = classCadre;
+        this.classCadre = classCadre;
     }
 
     public boolean isCommunityCadre() {
-        return isCommunityCadre;
+        return communityCadre;
     }
 
     public void setCommunityCadre(boolean communityCadre) {
-        isCommunityCadre = communityCadre;
+        this.communityCadre = communityCadre;
     }
 }
